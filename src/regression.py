@@ -88,7 +88,7 @@ class LinearRegressionAnalyzer:
         """Evaluate the fitted model on the test set.
 
         Returns:
-            Dictionary with R², adjusted R², MSE, RMSE, and MAE.
+            Dictionary with R2, adjusted R2, MSE, RMSE, and MAE.
         """
         self._check_fitted()
 
@@ -210,8 +210,8 @@ class LinearRegressionAnalyzer:
         print(f"  Features        : {self.X_train.shape[1]}")
         print("-" * 60)
         print("  MODEL METRICS (Test Set)")
-        print(f"  R²              : {metrics['r_squared']:.4f}")
-        print(f"  Adjusted R²     : {metrics['adjusted_r_squared']:.4f}")
+        print(f"  R2              : {metrics['r_squared']:.4f}")
+        print(f"  Adjusted R2     : {metrics['adjusted_r_squared']:.4f}")
         print(f"  MSE             : {metrics['mse']:.4f}")
         print(f"  RMSE            : {metrics['rmse']:.4f}")
         print(f"  MAE             : {metrics['mae']:.4f}")

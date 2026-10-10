@@ -7,6 +7,7 @@ Usage:
 """
 
 import argparse
+import os
 import numpy as np
 import pandas as pd
 from src.regression import LinearRegressionAnalyzer
@@ -23,6 +24,7 @@ def generate_sample_data(n_samples=200, noise=5.0, random_state=42):
 
     df = pd.DataFrame({"area_m2": area, "rooms": rooms, "price_usd": price})
     csv_path = "examples/sample_housing.csv"
+    os.makedirs("examples", exist_ok=True)
     df.to_csv(csv_path, index=False)
     print(f"Sample dataset saved to {csv_path} ({n_samples} rows)")
     return csv_path
